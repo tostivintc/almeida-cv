@@ -3,7 +3,7 @@
     <ul>
         {{ range .BasicInfo.Contacts }}
         <li class="contact__item">
-            <i class="{{ .Icon }}"></i><span>{{ .Info | safeHTML }}</span>
+            <i class="{{ .Icon }}"></i><span>{{ .Info | markdownify}}</span>
         </li>
         {{ end }}
     </ul>
