@@ -6,6 +6,11 @@
             <i class="{{ .Icon }}"></i><span>{{ .Info | markdownify}}</span>
         </li>
         {{ end }}
+        {{ if .BasicInfo.Qrcode }}
+        <div class="sideSection">
+            <img class="contact__qrcode" src="{{ .BasicInfo.Qrcode }}" alt="Contact info">
+        </div>
+        {{ end }}
     </ul>
 </div>
 {{ end }}
