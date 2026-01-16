@@ -8,9 +8,11 @@
     <div class="section__content">
         {{ range .Education }}
             <div class="education__item">
-                <h3 class="education__title">{{ .Course | safeHTML }}</h3>
+                <div class="experience__header">
+                  <h3 class="education__title">{{ .Course | safeHTML }}</h3>
+                  <h3 class="education__date">{{ .Date | safeHTML }}</h3>
+                </div>
                 <h4 class="education__place">{{ .Place | safeHTML }}</h4>
-                <h4 class="education__date">{{ .Date | safeHTML }}</h4>
                 <div class="education__description">{{ .Details | safeHTML }}</div>
             </div>
         {{ end }}
