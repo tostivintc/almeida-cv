@@ -13,7 +13,11 @@
             {{ end }}
                 <div class="experience__header">
                     <h3 class="experience__company">
+                    {{ if .Logo }}
+                        <img class="experience__logo" src="{{ .Logo }}">
+                    {{ else }}
                         {{ .Employer | safeHTML }}
+                    {{ end }}
                     </h3>
                     <h3 class="experience__place">{{ .Place | safeHTML }}</h3>
                 </div>
