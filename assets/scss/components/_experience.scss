@@ -6,7 +6,6 @@
     &__item {
         display: block;
         position: relative;
-        @include avoid-break;
         &:not(:first-child) {
             padding-top: 1.5rem;
         }
@@ -32,6 +31,7 @@
     }
 
     &__job {
+        @include avoid-break;
         position: relative;
         transition: transform 0.2s cubic-bezier($cubic);
         margin-bottom: 2rem;
