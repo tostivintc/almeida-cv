@@ -4,6 +4,7 @@
     }
 
     &__item {
+        @include avoid-break;
         display: block;
         position: relative;
         &:not(:first-child) {
