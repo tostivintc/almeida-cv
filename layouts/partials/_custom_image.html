@@ -1,5 +1,8 @@
-{{ if .BasicInfo.CustomImage }}
+{{ if .Custom }}
     <div class="sideSection">
-        <img src="{{ .BasicInfo.CustomImage }}" style="vertical-align:middle;max-width:110%;margin:0px -5%">
+        <div class="sideSection__heading">
+            <h2 class="sideSection__title">{{ .Custom.Title | safeHTML }}</h2>
+        </div>
+        <img src="{{ .Custom.Image }}" style="vertical-align:middle;max-width:110%;margin:0px -5%">
     </div>
 {{ end }}
